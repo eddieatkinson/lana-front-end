@@ -1,24 +1,43 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import { logo } from "../assets";
 import HamburgerMenu from "react-hamburger-menu";
+import { Link } from "react-scroll";
+import { logo } from "../assets";
 import { largeBreakpoint, teal } from "../utilities";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  function hey() {
-    console.log("Hi!");
+
+  function linkClicked() {
+    setIsMenuOpen(!isMenuOpen);
   }
 
   function renderDesktopMenu() {
     return (
       <DesktopMenu>
-        <MenuItem href="#">
+        <MenuItem href="#lana">
           <Logo src={logo}></Logo>
         </MenuItem>
-        <MenuItem onClick={hey}>Meet Lana</MenuItem>
-        <MenuItem>Welcome to the Studio</MenuItem>
-        <MenuItem>What the Babes Say</MenuItem>
+        <MenuItem>
+          <Link style={styles.scrollLink} to="lana" spy={true} smooth={true}>
+            Meet Lana
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link style={styles.scrollLink} to="about" spy={true} smooth={true}>
+            Welcome to the Studio
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link
+            style={styles.scrollLink}
+            to="testimonials"
+            spy={true}
+            smooth={true}
+          >
+            What the Babes Say
+          </Link>
+        </MenuItem>
       </DesktopMenu>
     );
   }
@@ -27,13 +46,43 @@ function Navbar() {
     return (
       <HamburgerDropdown>
         <li>
-          <MenuItem onClick={hey}>Meet Lana</MenuItem>
+          <MenuItem>
+            <Link
+              onClick={linkClicked}
+              style={styles.scrollLink}
+              to="lana"
+              spy={true}
+              smooth={true}
+            >
+              Meet Lana
+            </Link>
+          </MenuItem>
         </li>
         <li>
-          <MenuItem onClick={hey}>Welcome to the Studio</MenuItem>
+          <MenuItem>
+            <Link
+              onClick={linkClicked}
+              style={styles.scrollLink}
+              to="about"
+              spy={true}
+              smooth={true}
+            >
+              Welcome to the Studio
+            </Link>
+          </MenuItem>
         </li>
         <li>
-          <MenuItem onClick={hey}>What the Babes Say</MenuItem>
+          <MenuItem>
+            <Link
+              onClick={linkClicked}
+              style={styles.scrollLink}
+              to="testimonials"
+              spy={true}
+              smooth={true}
+            >
+              What the Babes Say
+            </Link>
+          </MenuItem>
         </li>
       </HamburgerDropdown>
     );
@@ -54,11 +103,51 @@ function Navbar() {
   function renderClassList() {
     return (
       <DesktopMenu>
-        <ClassItem>Barre</ClassItem>
-        <ClassItem>Pop Pilates</ClassItem>
-        <ClassItem>Cardio Yoga</ClassItem>
-        <ClassItem>Buti Yoga</ClassItem>
-        <ClassItem>Paddleboard</ClassItem>
+        <ClassItem>
+          <Link style={styles.scrollLink} to="barre" spy={true} smooth={true}>
+            Barre
+          </Link>
+        </ClassItem>
+        <ClassItem>
+          <Link
+            style={styles.scrollLink}
+            to="popPilates"
+            spy={true}
+            smooth={true}
+          >
+            Pop Pilates
+          </Link>
+        </ClassItem>
+        <ClassItem>
+          <Link
+            style={styles.scrollLink}
+            to="cardioYoga"
+            spy={true}
+            smooth={true}
+          >
+            Cardio Yoga
+          </Link>
+        </ClassItem>
+        <ClassItem>
+          <Link
+            style={styles.scrollLink}
+            to="butiYoga"
+            spy={true}
+            smooth={true}
+          >
+            Buti Yoga
+          </Link>
+        </ClassItem>
+        <ClassItem>
+          <Link
+            style={styles.scrollLink}
+            to="paddleboard"
+            spy={true}
+            smooth={true}
+          >
+            Paddleboard
+          </Link>
+        </ClassItem>
       </DesktopMenu>
     );
   }
@@ -71,6 +160,12 @@ function Navbar() {
     </Header>
   );
 }
+
+const styles = {
+  scrollLink: {
+    color: `#${teal}`,
+  },
+};
 
 const Header = styled.header`
   @media screen and (max-width: ${largeBreakpoint}px) {
@@ -95,12 +190,7 @@ const MobileMenu = styled.div`
 `;
 
 const MenuItemCss = css`
-  display: block;
-  box-shadow: none;
-  text-decoration: none;
-  text-align: center;
   font-family: DancingScript;
-  color: #${teal};
   font-size: 1.2rem;
   &:hover {
     color: #${teal};
@@ -108,11 +198,11 @@ const MenuItemCss = css`
   }
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled.div`
   ${MenuItemCss}
 `;
 
-const ClassItem = styled.a`
+const ClassItem = styled.div`
   ${MenuItemCss}
   font-family: Nunito;
   padding: 1rem;
