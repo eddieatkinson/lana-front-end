@@ -53,7 +53,7 @@ export default () => {
   function displayDropdown() {
     return (
       <HamburgerDropdown>
-        <li>
+        <DropdownMenuItem>
           <MenuItem>
             <Link
               onClick={linkClicked}
@@ -65,8 +65,8 @@ export default () => {
               Meet Lana
             </Link>
           </MenuItem>
-        </li>
-        <li>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
           <MenuItem>
             <Link
               onClick={linkClicked}
@@ -78,8 +78,8 @@ export default () => {
               Welcome to the Studio
             </Link>
           </MenuItem>
-        </li>
-        <li>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
           <MenuItem>
             <Link
               onClick={linkClicked}
@@ -91,7 +91,20 @@ export default () => {
               What the Babes Say
             </Link>
           </MenuItem>
-        </li>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <MenuItem>
+            <Link
+              onClick={linkClicked}
+              style={styles.scrollLink}
+              to="barre"
+              spy={true}
+              smooth={true}
+            >
+              Classes
+            </Link>
+          </MenuItem>
+        </DropdownMenuItem>
       </HamburgerDropdown>
     );
   }
@@ -220,6 +233,10 @@ const MenuItem = styled.div`
   ${MenuItemCss}
 `;
 
+const DropdownMenuItem = styled.li`
+  margin: 0.5rem 0 0.5rem 0.5rem;
+`;
+
 const ClassItem = styled.div`
   ${MenuItemCss}
   font-family: Nunito;
@@ -229,7 +246,6 @@ const ClassItem = styled.div`
 const BookNowItem = styled.a`
   font-family: Nunito;
   padding: 1rem;
-  /* margin: 1rem; */
   color: white;
   border-radius: 10%;
   &:hover {
@@ -245,6 +261,8 @@ const Logo = styled.img`
 const HamburgerDropdown = styled.ul`
   position: absolute;
   list-style-type: none;
+  background-color: #ffffffdd;
+  border-radius: 5%;
   @media screen and (min-width: 1200px) {
     display: none;
   }

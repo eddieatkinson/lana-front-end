@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Element } from "react-scroll";
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { teal, largeBreakpoint } from "../utilities";
+import { teal, mediumBreakpoint, largeBreakpoint } from "../utilities";
 
 export default () => {
   return (
@@ -11,7 +11,7 @@ export default () => {
       <Header>What the Babes Say</Header>
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={20}
+        naturalSlideHeight={window.innerWidth > largeBreakpoint ? 20 : 40}
         totalSlides={5}
         isPlaying
         interval={3000}
@@ -68,6 +68,9 @@ const Header = styled.h1`
   text-align: center;
   font-size: 3rem;
   margin-bottom: 4rem;
+  @media screen and (max-width: ${mediumBreakpoint}px) {
+    font-size: 2rem;
+  }
 `;
 const SlideContent = styled.div`
   text-align: center;
@@ -76,14 +79,14 @@ const SlideQuote = styled.h1`
   color: #${teal};
   font-family: Nunito;
   font-size: 2.3rem;
-  @media screen and (max-width: ${largeBreakpoint}px) {
-    font-size: 1rem;
+  @media screen and (max-width: ${mediumBreakpoint}px) {
+    font-size: 1.2rem;
   }
 `;
 const SlideCitation = styled.p`
   font-family: DancingScript;
   font-size: 2rem;
-  @media screen and (max-width: ${largeBreakpoint}px) {
-    font-size: 1rem;
+  @media screen and (max-width: ${mediumBreakpoint}px) {
+    font-size: 1.1rem;
   }
 `;
