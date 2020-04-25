@@ -10,7 +10,7 @@ export default (props) => {
     <Element style={{ margin: "10rem 0" }} name={name}>
       <Header>{title}</Header>
       <Content>
-        <Text style={{ order }}>{children}</Text>
+        <Text order={order}>{children}</Text>
         {src && (
           <ImageWrapper>
             <Image src={src} alt={title}></Image>
@@ -38,6 +38,11 @@ const Text = styled.div`
   margin: 0 1rem;
   flex: 4;
   font-size: 1.5rem;
+  order: ${(props) => props.order};
+  @media screen and (max-width: ${largeBreakpoint}px) {
+    font-size: 1rem;
+    order: 1;
+  }
 `;
 const Image = styled.img`
   max-width: 100%;
