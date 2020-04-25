@@ -1,3 +1,9 @@
 export const logo = require("./logo.png");
 export const logoJpg = require("./logo.jpg");
 export const lanaSunflowers = require("./lana-sunflowers.jpg");
+export const barre = require("./barre.jpg");
+export const butiYoga = require("./butiYoga.jpg");
+export const cardioYoga = require("./cardioYoga.jpg");
+export const paddleboard = require("./paddleboard.jpg");
+export const popPilates = require("./popPilates.jpg");
+export const about = require("./about.jpg");

@@ -1,7 +1,7 @@
 import React from "react";
 
-function Lana() {
-  return <div>Lana</div>;
-}
+import Description from "./Description";
 
-export default Lana;
+export default () => {
+  return <Description name="lana">Lana</Description>;
+};

@@ -1,7 +1,7 @@
 import React from "react";
 
-function Barre() {
-  return <div>Barre</div>;
-}
+import Description from "./Description";
 
-export default Barre;
+export default () => {
+  return <Description name="barre">Barre</Description>;
+};

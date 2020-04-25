@@ -1,7 +1,7 @@
 import React from "react";
 
-function ButiYoga() {
-  return <div>ButiYoga</div>;
-}
+import Description from "./Description";
 
-export default ButiYoga;
+export default () => {
+  return <Description name="butiYoga">ButiYoga</Description>;
+};

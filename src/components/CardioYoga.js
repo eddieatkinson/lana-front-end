@@ -1,7 +1,7 @@
 import React from "react";
 
-function CardioYoga() {
-  return <div>CardioYoga</div>;
-}
+import Description from "./Description";
 
-export default CardioYoga;
+export default () => {
+  return <Description name="cardioYoga">CardioYoga</Description>;
+};

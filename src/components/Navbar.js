@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import { logo } from "../assets";
 import { largeBreakpoint, teal } from "../utilities";
 
-function Navbar() {
+export default () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function linkClicked() {
@@ -37,6 +37,14 @@ function Navbar() {
           >
             What the Babes Say
           </Link>
+        </MenuItem>
+        <MenuItem>
+          <BookNowItem
+            href="https://www.schedulicity.com/scheduling/bpanzq"
+            target="_blank"
+          >
+            Book Now
+          </BookNowItem>
         </MenuItem>
       </DesktopMenu>
     );
@@ -96,6 +104,14 @@ function Navbar() {
           menuClicked={() => setIsMenuOpen(!isMenuOpen)}
           color={`#${teal}`}
         />
+        <MenuItem>
+          <BookNowItem
+            href="https://www.schedulicity.com/scheduling/bpanzq"
+            target="_blank"
+          >
+            Book Now
+          </BookNowItem>
+        </MenuItem>
       </MobileMenu>
     );
   }
@@ -159,7 +175,7 @@ function Navbar() {
       {renderClassList()}
     </Header>
   );
-}
+};
 
 const styles = {
   scrollLink: {
@@ -169,7 +185,7 @@ const styles = {
 
 const Header = styled.header`
   @media screen and (max-width: ${largeBreakpoint}px) {
-    padding: 1rem;
+    margin: 1.5rem 1rem;
   }
 `;
 
@@ -184,6 +200,8 @@ const DesktopMenu = styled.div`
 `;
 
 const MobileMenu = styled.div`
+  display: flex;
+  justify-content: space-between;
   @media screen and (min-width: ${largeBreakpoint - 1}px) {
     display: none;
   }
@@ -208,6 +226,18 @@ const ClassItem = styled.div`
   padding: 1rem;
 `;
 
+const BookNowItem = styled.a`
+  font-family: Nunito;
+  padding: 1rem;
+  /* margin: 1rem; */
+  color: white;
+  border-radius: 10%;
+  &:hover {
+    color: white;
+  }
+  background-color: #${teal};
+`;
+
 const Logo = styled.img`
   width: 9rem;
 `;
@@ -219,5 +249,3 @@ const HamburgerDropdown = styled.ul`
     display: none;
   }
 `;
-
-export default Navbar;
