@@ -24,7 +24,7 @@ export default () => {
                 Deserunt ut laborum exercitation et eiusmod minim excepteur enim
                 deserunt aute.
               </SlideQuote>
-              <SlideCitation>-Eddie</SlideCitation>
+              <SlideCitation>-Crystal</SlideCitation>
             </SlideContent>
           </Slide>
           <Slide index={1}>
@@ -32,13 +32,13 @@ export default () => {
               <SlideQuote>
                 Reprehenderit officia exercitation id tempor tempor.
               </SlideQuote>
-              <SlideCitation>-Crystal</SlideCitation>
+              <SlideCitation>-Eddie</SlideCitation>
             </SlideContent>
           </Slide>
           <Slide index={2}>
             <SlideContent>
               <SlideQuote>Commodo pariatur irure mollit minim.</SlideQuote>
-              <SlideCitation>-Flynn Rider</SlideCitation>
+              <SlideCitation>-Another</SlideCitation>
             </SlideContent>
           </Slide>
           <Slide index={3}>
