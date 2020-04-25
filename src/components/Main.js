@@ -18,24 +18,12 @@ export default () => {
       <Image src={top} />
       <Lana />
       <About />
-      <Element name="testimonials">
-        <Testimonials />
-      </Element>
-      <Element name="barre">
-        <Barre />
-      </Element>
-      <Element name="popPilates">
-        <PopPilates />
-      </Element>
-      <Element name="cardioYoga">
-        <CardioYoga />
-      </Element>
-      <Element name="butiYoga">
-        <ButiYoga />
-      </Element>
-      <Element name="paddleboard">
-        <Paddleboard />
-      </Element>
+      <Testimonials />
+      <Barre />
+      <PopPilates />
+      <CardioYoga />
+      <ButiYoga />
+      <Paddleboard />
     </MainWrapper>
   );
 };
