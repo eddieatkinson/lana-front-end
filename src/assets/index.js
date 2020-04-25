@@ -7,3 +7,4 @@ export const cardioYoga = require("./cardioYoga.jpg");
 export const paddleboard = require("./paddleboard.jpg");
 export const popPilates = require("./popPilates.jpg");
 export const about = require("./about.jpg");
+export const top = require("./top.jpg");

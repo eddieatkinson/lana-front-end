@@ -5,14 +5,15 @@ import styled from "styled-components";
 import { largeBreakpoint } from "../utilities";
 
 export default (props) => {
-  const { children, name, src, textPlacement: order } = props;
+  const { children, name, src, textPlacement: order, title } = props;
   return (
-    <Element name={name}>
+    <Element style={{ margin: "10rem 0" }} name={name}>
+      <Header>{title}</Header>
       <Content>
         <Text style={{ order }}>{children}</Text>
         {src && (
           <ImageWrapper>
-            <Image src={src} alt="test"></Image>
+            <Image src={src} alt={title}></Image>
           </ImageWrapper>
         )}
       </Content>
@@ -22,16 +23,23 @@ export default (props) => {
 
 const Content = styled.div`
   display: flex;
+  justify-content: space-between;
   @media screen and (max-width: ${largeBreakpoint}px) {
     flex-direction: column;
+    margin: 3rem 0;
   }
 `;
+const Header = styled.h1`
+  font-family: DancingScript;
+  text-align: center;
+  font-size: 3rem;
+`;
 const Text = styled.div`
+  margin: 0 1rem;
   flex: 4;
+  font-size: 1.5rem;
 `;
 const Image = styled.img`
-  /* flex: 1; */
-  /* object-fit: contain;*/
   max-width: 100%;
 `;
 const ImageWrapper = styled.div`
