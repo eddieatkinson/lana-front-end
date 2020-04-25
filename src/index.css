@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Nunito";
-  src: local("Nunito"), url(./fonts/Nunito-Regular.ttf) format("truetype");
+  font-family: "Main";
+  src: local("Main"), url(./fonts/Nunito-Regular.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "DancingScript";
-  src: local("DancingScript"),
+  font-family: "Script";
+  src: local("Script"),
     url(./fonts/DancingScript-Regular.ttf) format("truetype");
 }
 

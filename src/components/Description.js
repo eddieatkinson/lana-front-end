@@ -30,7 +30,7 @@ const Content = styled.div`
   }
 `;
 const Header = styled.h1`
-  font-family: DancingScript;
+  font-family: Script;
   text-align: center;
   font-size: 3rem;
   @media screen and (max-width: ${mediumBreakpoint}px) {

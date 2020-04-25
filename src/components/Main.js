@@ -31,7 +31,7 @@ export default () => {
 };
 
 const MainWrapper = styled.div`
-  font-family: Nunito;
+  font-family: Main;
   width: 75vw;
   margin: auto;
   @media screen and (max-width: ${mediumBreakpoint}px) {

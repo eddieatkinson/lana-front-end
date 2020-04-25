@@ -221,7 +221,7 @@ const MobileMenu = styled.div`
 `;
 
 const MenuItemCss = css`
-  font-family: DancingScript;
+  font-family: Script;
   font-size: 1.2rem;
   &:hover {
     color: #${teal};
@@ -239,12 +239,12 @@ const DropdownMenuItem = styled.li`
 
 const ClassItem = styled.div`
   ${MenuItemCss}
-  font-family: Nunito;
+  font-family: Main;
   padding: 1rem;
 `;
 
 const BookNowItem = styled.a`
-  font-family: Nunito;
+  font-family: Main;
   padding: 1rem;
   color: white;
   border-radius: 10%;

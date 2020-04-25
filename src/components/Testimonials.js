@@ -15,6 +15,7 @@ export default () => {
         totalSlides={5}
         isPlaying
         interval={3000}
+        infinite
       >
         <Slider>
           <Slide index={0}>
@@ -64,7 +65,7 @@ export default () => {
   );
 };
 const Header = styled.h1`
-  font-family: DancingScript;
+  font-family: Script;
   text-align: center;
   font-size: 3rem;
   margin-bottom: 4rem;
@@ -77,14 +78,14 @@ const SlideContent = styled.div`
 `;
 const SlideQuote = styled.h1`
   color: #${teal};
-  font-family: Nunito;
+  font-family: Main;
   font-size: 2.3rem;
   @media screen and (max-width: ${mediumBreakpoint}px) {
     font-size: 1.2rem;
   }
 `;
 const SlideCitation = styled.p`
-  font-family: DancingScript;
+  font-family: Script;
   font-size: 2rem;
   @media screen and (max-width: ${mediumBreakpoint}px) {
     font-size: 1.1rem;

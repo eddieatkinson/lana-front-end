@@ -15,6 +15,6 @@ const FooterWrapper = styled.footer`
   padding: 5rem;
   color: white;
   text-align: center;
-  font-family: Nunito;
+  font-family: Main;
   font-size: 1rem;
 `;
